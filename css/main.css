@@ -7,8 +7,10 @@
 :root {
     --primary: #fff;
     --secondary: #1e529b;
+    --active: #153766;
     --selected: #8db8ff;
-    --invalid: #a81f1f;
+    --invalid: #c75858;
+    --gray: rgb(180, 180, 180);
 }
 
 main {
@@ -41,7 +43,72 @@ main {
     width: 60%;
 }
 
-.form {
+.right-container .text {
+    width: auto;
+    height: 12rem;
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
+    margin: 1rem;
+    font-size: 1.2rem;
+}
+
+.right-container .text {
+    margin-left: 1rem;
+    margin-top: 2rem;
+}
+
+.right-container p {
+    margin-left: 2rem;
+}
+
+form {
+    display: flex;
+    flex-flow: column wrap;
+    margin: 3rem;
+}
+
+button {
+    background-color: var(--secondary);
+    color: var(--primary);
+    font-weight: bold;
+    border: none;
+    padding: 0.6rem;
+    border-radius: 5px;
+    box-shadow: rgb(155, 155, 155) 0px 3px 3px;
+    margin: 2rem;
+    width: fit-content;
+}
+
+button:hover {
+    background-color: var(--active);
+    cursor: pointer;
+}
+
+form section .input-box {
+    display: flex;
+    flex-direction: column;
+}
+
+form section {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    margin-bottom: 1rem;
+}
+
+.form-container {
+    box-shadow: var(--gray) 0px 3px 10px;
+}
+
+input {
+    margin-top: 3px;
+    border: none;
+    border: 1px solid var(--gray);
+    padding: 0.3rem;
+    border-radius: 5px;
+}
+
+input:invalid {
+    border-color: var(--invalid);
 }
