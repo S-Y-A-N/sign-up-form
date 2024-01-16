@@ -2,14 +2,16 @@
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
+    color: #fff;
 }
 
 :root {
-    --primary: #fff;
-    --secondary: #1e529b;
-    --active: #153766;
+    --primary: #242424;
+    --secondary: #313131;
+    --accent: #a0a0a0;
+    --active: #ffdea0;
     --selected: #8db8ff;
-    --invalid: #c75858;
+    --invalid: #ffabab;
     --gray: rgb(180, 180, 180);
 }
 
@@ -21,7 +23,7 @@ main {
 
 .left-container {
     display: flex;
-    background-image: url(../images/ryunosuke-kikuno-cFxUZ7UAf-c-unsplash.jpg);
+    background-image: url(../images/arya-winarto-9XwrSmTNuuA-unsplash.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -69,13 +71,12 @@ form {
 }
 
 button {
-    background-color: var(--secondary);
+    background-color: var(--accent);
     color: var(--primary);
     font-weight: bold;
     border: none;
     padding: 0.6rem;
     border-radius: 5px;
-    box-shadow: rgb(155, 155, 155) 0px 3px 3px;
     margin: 2rem;
     width: fit-content;
 }
@@ -98,7 +99,7 @@ form section {
 }
 
 .form-container {
-    box-shadow: var(--gray) 0px 3px 10px;
+    background-color: var(--secondary);
 }
 
 input {
