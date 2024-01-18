@@ -1,6 +1,6 @@
 # Sign Up Form (Moonlight 🌕)
 
-A sign up form for an imaginary servive (moonlight sonata~), done for [The Odin Project](https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-sign-up-form).
+A sign up form for an imaginary service (moonlight sonata~), done for [The Odin Project](https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-sign-up-form).
 
 ## Live Preview
 
