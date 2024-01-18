@@ -1,26 +1,27 @@
 * {
-    font-family: "Kalam", cursive;
+    font-family: "Ubuntu", sans-serif;
     margin: 0;
     padding: 0;
     color: #fff;
 }
 
 :root {
-    --primary: #242424;
+    --primary: rgb(36, 36, 36);
     --secondary: rgb(49, 49, 49);
-    --accent: #a0a0a0;
-    --active: #ffdea0;
+    --accent: rgb(160, 160, 160);
+    --active: rgb(255, 222, 160);
     --selected: rgb(141, 184, 255);
     --invalid: rgb(255, 118, 118);
-    --gray: #E5E7EB;
+    --gray: rgb(229, 231, 235);
 }
 
-input {
-    color: #000;
+body {
+    background-color: var(--primary);
 }
 
 main {
     display: flex;
+    flex-direction: row;
     min-height: 100vh;
     min-height: 100dvh;
 }
@@ -60,6 +61,18 @@ main {
     margin: 10px auto;
 }
 
+.credit p {
+    font-family: "Kalam", cursive;
+}
+
+a {
+    font-family: "Kalam", cursive;
+}
+
+a:hover {
+    color: var(--active);
+}
+
 
 .right-container {
     display: flex;
@@ -90,7 +103,6 @@ main {
 form {
     display: flex;
     flex-flow: column wrap;
-    margin: 3rem;
 }
 
 button {
@@ -117,15 +129,33 @@ form section .input-box {
 form section {
     display: flex;
     flex-flow: row nowrap;
-    justify-content: space-around;
+    justify-content: center;
     margin-bottom: 1rem;
 }
 
 .form-container {
     background-color: var(--secondary);
+    padding: 3rem 0;
+}
+
+.input-box {
+    position: relative;
+    margin: 0 2rem;
+}
+
+#error {
+    font-size: .8rem;
+    margin-top: 5px;
+    color: var(--invalid);
+}
+
+.form-container p {
+    text-align: center;
+    font-size: .7rem;
 }
 
 input {
+    color: #000;
     margin-top: 3px;
     border: none;
     border: 1px solid var(--gray);
@@ -135,4 +165,71 @@ input {
 
 input:invalid {
     border-color: var(--invalid);
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--selected);
+}
+
+
+@media screen and (min-width: 1250px) {
+    .logo h1 {
+        font-size: 4.2rem;
+    }
+
+    .logo img {
+        width: 70px;
+    }
+
+    form {
+        margin: 0 auto
+    }
+
+    input {
+        min-width: 20rem;
+        max-width: 25rem;
+    }
+}
+
+
+@media screen and (max-width: 860px) {
+    main {
+        flex-direction: column;
+    }
+
+    .right-container, .left-container {
+        width: 100%;
+    }
+
+    .logo {
+        background: none;
+    }
+
+    .logo h1 {
+        font-size: 4rem;
+    }
+
+    .create-account {
+        margin-bottom: 40px;
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+    main {
+        height: 100svh;
+    }
+
+    form section {
+        flex-flow: wrap;
+    }
+
+    .input-box {
+        margin-top: 15px;
+    }
+
+    input {
+        width: 17rem;
+    }
 }
